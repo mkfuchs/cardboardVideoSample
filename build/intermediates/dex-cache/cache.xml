@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="D:\Users\Mike\projects\cardboard-java\CardboardSample\libs\cardboard.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="419a0f2b571af0b7348265ed3bbead8e8d363fe6">
+        <dex dex="D:\Users\Mike\projects\cardboard-java\CardboardSample\build\intermediates\pre-dexed\debug\cardboard-f2d52e699af56f7f734eb92363b7db276908416f.jar" />
+    </item>
+    <item
+        jar="D:\Users\Mike\projects\cardboard-java\CardboardSample\libs\libprotobuf-java-2.6-nano.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="2ba3ce68542db5a4b672a22606e4fd4631ed5c4f">
+        <dex dex="D:\Users\Mike\projects\cardboard-java\CardboardSample\build\intermediates\pre-dexed\debug\libprotobuf-java-2.6-nano-2491ccc7cbf8f13bb864ed40bfc34b7078b463cc.jar" />
+    </item>
+    <item
+        jar="D:\Users\Mike\projects\cardboard-java\CardboardSample\libs\cardboard.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="419a0f2b571af0b7348265ed3bbead8e8d363fe6">
+        <dex dex="D:\Users\Mike\projects\cardboard-java\CardboardSample\build\intermediates\pre-dexed\debug\cardboard-f2d52e699af56f7f734eb92363b7db276908416f.jar" />
+    </item>
+    <item
+        jar="D:\Users\Mike\projects\cardboard-java\CardboardSample\libs\cardboard.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="2403806886bbe517707b43afb5e5c9ce9883c4d2">
+        <dex dex="D:\Users\Mike\projects\cardboard-java\CardboardSample\build\intermediates\pre-dexed\debug\cardboard-f2d52e699af56f7f734eb92363b7db276908416f.jar" />
+    </item>
+
+</items>
