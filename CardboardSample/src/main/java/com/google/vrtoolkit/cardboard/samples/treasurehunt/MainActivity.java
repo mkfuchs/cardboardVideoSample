@@ -28,8 +28,6 @@ import android.graphics.SurfaceTexture;
 import android.graphics.SurfaceTexture.OnFrameAvailableListener;
 import android.hardware.Camera;
 import android.opengl.GLES20;
-import android.opengl.GLES30;
-import android.opengl.GLUtils;
 import android.opengl.Matrix;
 import android.os.Bundle;
 import android.os.Vibrator;
@@ -304,21 +302,8 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
         setContentView(R.layout.common_ui);
         CardboardView cardboardView = (CardboardView) findViewById(R.id.cardboard_view);
 
-
-        /*Display display = getWindowManager().getDefaultDisplay();
-        ScreenParams params = new ScreenParams(display);
-        params.setWidth( 2560 );
-        params.setHeight( 1440 );
-        cardboardView.updateScreenParams(params);*/
-
-
-
-        //2413x1352 or         //2560 x1440 or
         cardboardView.setRenderer(this);
         setCardboardView(cardboardView);
-
-
-
 
         mModelCube = new float[16];
         mCamera = new float[16];
@@ -328,8 +313,6 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
         mModelFloor = new float[16];
         mHeadView = new float[16];
         mVibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-
-
 
         mOverlayView = (CardboardOverlayView) findViewById(R.id.overlay);
         mOverlayView.show3DToast("Pull the magnet when you find an object.");
@@ -345,6 +328,7 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
     @Override
     public void onSurfaceChanged(int width, int height) {
         Log.i(TAG, "onSurfaceChanged");
+
     }
 
     /**
@@ -358,9 +342,7 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
     @Override
     public void onSurfaceCreated(EGLConfig config) {
 
-
-
-
+        getWindow().getDecorView().setSystemUiVisibility(5894);
         Log.i(TAG, "onSurfaceCreated");
         GLES20.glClearColor(0.1f, 0.1f, 0.1f, 0.5f); // Dark background so text shows up well.
 
@@ -495,13 +477,10 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
         GLES20.glAttachShader(mProgram, fragmentShader); // add the fragment shader to program
         GLES20.glLinkProgram(mProgram);
 
-
-
         texture = createTexture();
         startCamera(texture);
 
         checkGLError("onSurfaceCreated");
-
     }
 
     /**
@@ -608,7 +587,6 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
         GLES20.glEnable(GLES20.GL_BLEND);
         GLES20.glBlendFunc(GLES20.GL_SRC_ALPHA, GLES20.GL_ONE_MINUS_SRC_ALPHA);
         drawFloor();
-
 
     }
 
